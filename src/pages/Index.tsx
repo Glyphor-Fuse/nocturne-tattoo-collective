@@ -1,34 +1,47 @@
-// Update this page (the content is just a fallback if you fail to update the page)
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Hero } from "@/components/Hero";
+import { FlashlightGallery } from "@/components/FlashlightGallery";
+import { PricingStats } from "@/components/PricingStats";
+import { InstagramFeed } from "@/components/InstagramFeed";
+import { AftercareFAQ } from "@/components/AftercareFAQ";
+import { StudioVibe } from "@/components/StudioVibe";
+import { BookingCTA } from "@/components/BookingCTA";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-background p-4">
-      {/* This is a placeholder page. 
-        It demonstrates how to use "shadcn-ui" components and Tailwind CSS.
-        The AI interprets these imports as available UI primitives.
-      */}
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center">Welcome to Your Project</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-center text-muted-foreground">
-            Start building your application by editing <code className="bg-muted px-1 rounded">src/pages/Index.tsx</code>
-          </p>
-          
-          <div className="space-y-2">
-            <Input placeholder="Enter your project name..." />
-            <Button className="w-full">
-              Create Something Amazing
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+    <main className="min-h-screen bg-background text-foreground overflow-x-hidden selection:bg-primary selection:text-white">
+      {/* 1. Atmospheric hero */}
+      <Hero />
+      
+      {/* 2. Signature Feature: Flashlight Artist Reveal */}
+      <FlashlightGallery />
+      
+      {/* 3. Pricing */}
+      <PricingStats />
+      
+      {/* 4. Instagram Feed */}
+      <InstagramFeed />
+      
+      {/* 5. Aftercare Info */}
+      <AftercareFAQ />
+      
+      {/* 6. Studio Vibe Parallax */}
+      <StudioVibe />
+      
+      {/* 7. Final Booking CTA */}
+      <BookingCTA />
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-white/10 bg-black text-center">
+        <div className="font-display text-2xl text-white mb-4">
+            NOCTURNE<span className="text-primary italic">&</span>CO
+        </div>
+        <div className="font-mono text-xs text-white/40 space-y-2">
+            <p>128 FLINDERS LN, MELBOURNE VIC 3000</p>
+            <p>© MMXXIV NOCTURNE TATTOO COLLECTIVE. ALL RIGHTS RESERVED.</p>
+        </div>
+      </footer>
+    </main>
   );
 };
 
